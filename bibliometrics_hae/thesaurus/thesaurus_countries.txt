@@ -1,0 +1,7 @@
+label	replace by
+England	United Kingdom
+North Ireland	United Kingdom
+Peoples R China	China
+Scotland	United Kingdom
+Turkiye	Turkey
+Wales	United Kingdom
