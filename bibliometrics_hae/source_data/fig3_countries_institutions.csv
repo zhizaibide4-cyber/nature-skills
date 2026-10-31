@@ -1,0 +1,31 @@
+Entity_Type,Name,Publications,Total_Citations,CPP,H_Index
+Country,China,154,2685,17.44,23
+Country,Germany,46,3347,72.76,23
+Country,Switzerland,38,2100,55.26,23
+Country,Turkey,37,1179,31.86,15
+Country,France,36,4743,131.75,24
+Country,Japan,17,310,18.24,8
+Country,USA,15,1040,69.33,10
+Country,Poland,14,240,17.14,9
+Country,Iran,9,287,31.89,6
+Country,Austria,9,199,22.11,6
+Country,Canada,8,127,15.88,5
+Country,Italy,8,2134,266.75,7
+Country,United Kingdom,7,303,43.29,7
+Country,Australia,7,1122,160.29,7
+Country,Slovakia,7,61,8.71,6
+Institution,Xinjiang Medical University,56,1628,29.07,14
+Institution,Sichuan University,37,458,12.38,13
+Institution,University of Franche-Comte / CHU Besancon,35,4725,135.0,24
+Institution,Qinghai University,29,181,6.24,8
+Institution,Ulm University,27,2881,106.7,19
+Institution,University of Bern,23,1129,49.09,16
+Institution,Qinghai Provincial People's Hospital,15,55,3.67,5
+Institution,Ataturk University,12,151,12.58,8
+Institution,University of Zurich,11,1068,97.09,10
+Institution,Medical University of Warsaw,7,161,23.0,6
+Institution,University of Alberta,7,119,17.0,4
+Institution,Hacettepe University,7,557,79.57,4
+Institution,Med Univ Vienna,6,79,13.17,5
+Institution,Hokkaido Univ,6,91,15.17,4
+Institution,Univ Elect Sci & Technol China,6,48,8.0,4

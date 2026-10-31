@@ -322,6 +322,8 @@ KEYWORD_MAP = {
     "allogeneic liver transplantation": "liver transplantation",
     "living donor liver transplantation": "living donor liver transplantation",
     "living donor": "living donor liver transplantation",
+    "donor liver-transplantation": "living donor liver transplantation",
+    "living-donor liver-transplantation": "living donor liver transplantation",
     "hepatectomy": "hepatectomy",
     "liver resection": "hepatectomy",
     "hepatic resection": "hepatectomy",

@@ -20,6 +20,7 @@ complications	postoperative complications
 computed-tomography	computed tomography
 ct	computed tomography
 curative resection	radical resection
+donor liver-transplantation	living donor liver transplantation
 drug treatment	antiparasitic therapy
 e-multilocularis	echinococcus multilocularis
 e. granulosus	echinococcus granulosus
@@ -62,6 +63,7 @@ liver resection	hepatectomy
 liver surgery	surgical treatment
 liver-transplantation	liver transplantation
 living donor	living donor liver transplantation
+living-donor liver-transplantation	living donor liver transplantation
 long-term follow-up	follow-up
 magnetic-resonance-imaging	magnetic resonance imaging
 major liver resection	hepatectomy
