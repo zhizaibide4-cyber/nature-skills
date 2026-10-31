@@ -85,6 +85,7 @@ Word 末页有同样一份清单，红色段落不能留在送审稿里。
 
 ```bash
 python3 clean_wos_hae.py
+python3 export_cleaning_steps_excel.py
 python3 generate_summary_tables.py
 python3 generate_figures_part1.py
 python3 generate_figures_part2.py
