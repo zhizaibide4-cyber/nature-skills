@@ -1,0 +1,21 @@
+label	replace by
+Ataturk Univ	Ataturk University
+CHU Besancon	University of Franche-Comte / CHU Besancon
+First Affiliated Hospital of Xinjiang Medical University	Xinjiang Medical University
+Hacettepe Univ	Hacettepe University
+Med Univ Warsaw	Medical University of Warsaw
+Qinghai Prov Peoples Hosp	Qinghai Provincial People's Hospital
+Qinghai Univ	Qinghai University
+Sichuan Univ	Sichuan University
+Univ Alberta	University of Alberta
+Univ Bern	University of Bern
+Univ Bourgogne Franche Comte	University of Franche-Comte / CHU Besancon
+Univ Franche Comte	University of Franche-Comte / CHU Besancon
+Univ Hosp Besancon	University of Franche-Comte / CHU Besancon
+Univ Hosp Ulm	Ulm University
+Univ Ulm	Ulm University
+Univ Zurich	University of Zurich
+Universite Marie et Louis Pasteur	University of Franche-Comte / CHU Besancon
+University Zurich Hospital	University of Zurich
+West China Hospital	Sichuan University
+Xinjiang Med Univ	Xinjiang Medical University

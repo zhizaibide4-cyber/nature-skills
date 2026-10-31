@@ -1,0 +1,97 @@
+label	replace by
+18f-fdg pet/ct	pet/ct
+3d reconstruction	three-dimensional reconstruction
+allogeneic liver transplantation	liver transplantation
+alveococcosis	alveolar echinococcosis
+alveolar echinococcosis (ae)	alveolar echinococcosis
+alveolar hydatid	alveolar echinococcosis
+alveolar hydatid cyst	alveolar echinococcosis
+alveolar hydatid disease	alveolar echinococcosis
+alveolar hydatidosis	alveolar echinococcosis
+autologous liver transplantation	ex vivo liver resection and autotransplantation
+autotransplantation	ex vivo liver resection and autotransplantation
+benzimidazole	benzimidazoles
+biliary complication	biliary complications
+budd chiary syndrome	budd-chiari syndrome
+budd-chiari-syndrome	budd-chiari syndrome
+chemotherapy	antiparasitic therapy
+clinical-features	clinical features
+complications	postoperative complications
+computed-tomography	computed tomography
+ct	computed tomography
+curative resection	radical resection
+donor liver-transplantation	living donor liver transplantation
+drug treatment	antiparasitic therapy
+e-multilocularis	echinococcus multilocularis
+e. granulosus	echinococcus granulosus
+e. multilocularis	echinococcus multilocularis
+echinococciasis	echinococcosis
+echinococcosis multilocularis	echinococcus multilocularis
+echinococcus	echinococcosis
+echinococcus alveolaris	echinococcus multilocularis
+elra	ex vivo liver resection and autotransplantation
+ex vivo	ex vivo liver resection and autotransplantation
+ex vivo liver resection	ex vivo liver resection and autotransplantation
+ex vivo liver resection and autotransplantation (elra)	ex vivo liver resection and autotransplantation
+ex vivo resection	ex vivo liver resection and autotransplantation
+ex-situ ex-vivo liver resection	ex vivo liver resection and autotransplantation
+ex-vivo liver resection	ex vivo liver resection and autotransplantation
+extracorporeal hepatic resection	ex vivo liver resection and autotransplantation
+fdg-pet/ct	pet/ct
+fox tapeworm	echinococcus multilocularis
+granulosus	echinococcus granulosus
+hepatic alveolar echinococcosis (hae)	hepatic alveolar echinococcosis
+hepatic alveolar hydatid cyst	hepatic alveolar echinococcosis
+hepatic alveolar hydatid disease	hepatic alveolar echinococcosis
+hepatic resection	hepatectomy
+human alveolar echinococcosis	alveolar echinococcosis
+human cystic echinococcosis	cystic echinococcosis
+hydatid	hydatid disease
+hydatid cyst	hydatid disease
+hydatid cysts	hydatid disease
+hydatid-disease	hydatid disease
+hydatidosis	hydatid disease
+inferior vena-cava	inferior vena cava
+ivc resection	vascular reconstruction
+laparoscopic liver resection	laparoscopic hepatectomy
+laparoscopic surgery	laparoscopic hepatectomy
+laparoscopy	laparoscopic hepatectomy
+liver alveococcosis	hepatic alveolar echinococcosis
+liver alveolar echinococcosis	hepatic alveolar echinococcosis
+liver autotransplantation	ex vivo liver resection and autotransplantation
+liver resection	hepatectomy
+liver surgery	surgical treatment
+liver-transplantation	liver transplantation
+living donor	living donor liver transplantation
+living-donor liver-transplantation	living donor liver transplantation
+long-term follow-up	follow-up
+magnetic-resonance-imaging	magnetic resonance imaging
+major liver resection	hepatectomy
+medical treatment	antiparasitic therapy
+medical-treatment	antiparasitic therapy
+mri	magnetic resonance imaging
+multilocularis	echinococcus multilocularis
+multilocularis infection	echinococcus multilocularis
+operative treatment	surgical treatment
+orthotopic liver transplantation	liver transplantation
+orthotopic liver-transplantation	liver transplantation
+palliative resection	palliative surgery
+palliative treatment	palliative surgery
+pet-ct	pet/ct
+positron emission tomography	pet/ct
+positron-emission-tomography	pet/ct
+r0 resection	radical resection
+radical hepatectomy	radical resection
+radical surgery	radical resection
+reconstruction	vascular reconstruction
+resection	hepatectomy
+retrohepatic inferior vena cava	inferior vena cava
+surgery	surgical treatment
+surgical intervention	surgical treatment
+surgical management	surgical treatment
+surgical procedures	surgical treatment
+surgical-treatment	surgical treatment
+term-follow-up	follow-up
+ultrasound	ultrasonography
+vena-cava	inferior vena cava
+vivo liver resection	ex vivo liver resection and autotransplantation

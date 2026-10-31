@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="413.28pt" height="321.984pt" viewBox="0 0 413.28 321.984" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-10-31T15:00:00.009970</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 321.984 
+L 413.28 321.984 
+L 413.28 -0 
+L 0 -0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 9.7776 70.95744 
+L 29.06208 70.95744 
+L 29.06208 13.5216 
+L 9.7776 13.5216 
+z
+" clip-path="url(#p49ccade014)" style="fill: #1f4e78"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 9.7776 139.25952 
+L 29.06208 139.25952 
+L 29.06208 83.376 
+L 9.7776 83.376 
+z
+" clip-path="url(#p49ccade014)" style="fill: #2e75b6"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 9.7776 226.18944 
+L 29.06208 226.18944 
+L 29.06208 151.67808 
+L 9.7776 151.67808 
+z
+" clip-path="url(#p49ccade014)" style="fill: #2a788e"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 9.7776 306.91008 
+L 29.06208 306.91008 
+L 29.06208 238.608 
+L 9.7776 238.608 
+z
+" clip-path="url(#p49ccade014)" style="fill: #4e8a6e"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 35.892 72.50976 
+L 222.7104 72.50976 
+L 222.7104 13.5216 
+L 35.892 13.5216 
+z
+" clip-path="url(#p49ccade014)" style="fill: #f4f8fc; stroke: #1f4e78; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 238.7808 72.50976 
+L 401.4936 72.50976 
+L 401.4936 13.5216 
+L 238.7808 13.5216 
+z
+" clip-path="url(#p49ccade014)" style="fill: #f9fafb; stroke: #bfbfbf; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 35.892 139.25952 
+L 222.7104 139.25952 
+L 222.7104 83.376 
+L 35.892 83.376 
+z
+" clip-path="url(#p49ccade014)" style="fill: #f4f8fc; stroke: #2e75b6; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 238.7808 139.25952 
+L 401.4936 139.25952 
+L 401.4936 83.376 
+L 238.7808 83.376 
+z
+" clip-path="url(#p49ccade014)" style="fill: #fdf3ee; stroke: #c55a11; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 35.892 226.18944 
+L 222.7104 226.18944 
+L 222.7104 151.67808 
+L 35.892 151.67808 
+z
+" clip-path="url(#p49ccade014)" style="fill: #f2f9f9; stroke: #2a788e; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 238.7808 226.18944 
+L 401.4936 226.18944 
+L 401.4936 151.67808 
+L 238.7808 151.67808 
+z
+" clip-path="url(#p49ccade014)" style="fill: #fdf3ee; stroke: #c55a11; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 35.892 306.91008 
+L 222.7104 306.91008 
+L 222.7104 238.608 
+L 35.892 238.608 
+z
+" clip-path="url(#p49ccade014)" style="fill: #eff7f2; stroke: #4e8a6e; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 238.7808 306.91008 
+L 401.4936 306.91008 
+L 401.4936 238.608 
+L 238.7808 238.608 
+z
+" clip-path="url(#p49ccade014)" style="fill: #eff7f2; stroke: #4e8a6e; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 6.3px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: middle; fill: #ffffff" x="21.05661" y="42.23952" transform="rotate(-90 21.05661 42.23952)">Identification</text>
+   </g>
+   <g id="text_2">
+    <text style="font-weight: 700; font-size: 6.3px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: middle; fill: #ffffff" x="21.05661" y="111.31776" transform="rotate(-90 21.05661 111.31776)">Screening</text>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 6.3px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: middle; fill: #ffffff" x="21.05661" y="188.93376" transform="rotate(-90 21.05661 188.93376)">Eligibility</text>
+   </g>
+   <g id="text_4">
+    <text style="font-weight: 700; font-size: 6.3px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: middle; fill: #ffffff" x="21.05661" y="272.75904" transform="rotate(-90 21.05661 272.75904)">Included</text>
+   </g>
+   <g id="text_5">
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: middle; fill: #1f4e78" x="129.3012" y="24.669864" transform="rotate(-0 129.3012 24.669864)">Web of Science Core Collection</text>
+   </g>
+   <g id="text_6">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="34.072822" transform="rotate(-0 43.12368 34.072822)">Search span: Jan 1, 2000 to Oct 31, 2026</text>
+   </g>
+   <g id="text_7">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="43.076278" transform="rotate(-0 43.12368 43.076278)">Topic search (TS): AE / E. multilocularis terms</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="52.079734" transform="rotate(-0 43.12368 52.079734)">  AND hepatic surgical terms (full string in Methods)</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="61.08319" transform="rotate(-0 43.12368 61.08319)">Records exported (full record + CR): n = 456</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: middle; fill: #595959" x="320.1372" y="24.669864" transform="rotate(-0 320.1372 24.669864)">Metadata Quality Inspection</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="246.01248" y="34.072822" transform="rotate(-0 246.01248 34.072822)">Full record &amp; cited references verified</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="246.01248" y="43.076278" transform="rotate(-0 246.01248 43.076278)">Unique WoS accession numbers (UT): 456</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="246.01248" y="52.079734" transform="rotate(-0 246.01248 52.079734)">Duplicate records removed: n = 0</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="246.01248" y="61.08319" transform="rotate(-0 246.01248 61.08319)">HTML tags stripped (&lt;italic&gt;, &lt;bold&gt;)</text>
+   </g>
+   <g id="text_15">
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: middle; fill: #1f4e78" x="129.3012" y="94.524264" transform="rotate(-0 129.3012 94.524264)">Publication Integrity &amp; Retraction Screening</text>
+   </g>
+   <g id="text_16">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="103.927222" transform="rotate(-0 43.12368 103.927222)">Records screened for retraction notices and</text>
+   </g>
+   <g id="text_17">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="112.930678" transform="rotate(-0 43.12368 112.930678)">bibliographic validity (n = 456)</text>
+   </g>
+   <g id="text_18">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="121.934134" transform="rotate(-0 43.12368 121.934134)">Non-retracted standardized dataset retained</text>
+   </g>
+   <g id="text_19">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="130.93759" transform="rotate(-0 43.12368 130.93759)">for sensitivity comparison (n = 453)</text>
+   </g>
+   <g id="text_20">
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: middle; fill: #c55a11" x="320.1372" y="94.524264" transform="rotate(-0 320.1372 94.524264)">Excluded: Retracted Publications (n = 3)</text>
+   </g>
+   <g id="text_21">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="246.01248" y="103.927222" transform="rotate(-0 246.01248 103.927222)">1. WOS:000246982200023 (2007, Liver Transpl)</text>
+   </g>
+   <g id="text_22">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="246.01248" y="112.930225" transform="rotate(-0 246.01248 112.930225)">2. WOS:000401125000020 (2017, J Surg Res)</text>
+   </g>
+   <g id="text_23">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="246.01248" y="121.934134" transform="rotate(-0 246.01248 121.934134)">3. WOS:000507597800009 (2019, Sci Rep)</text>
+   </g>
+   <g id="text_24">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="246.01248" y="130.93759" transform="rotate(-0 246.01248 130.93759)">All 3 retracted articles removed prior to analysis</text>
+   </g>
+   <g id="text_25">
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: middle; fill: #2a788e" x="129.3012" y="162.826344" transform="rotate(-0 129.3012 162.826344)">Clinical Eligibility Assessment (n = 453)</text>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="172.229302" transform="rotate(-0 43.12368 172.229302)">Title, Abstract &amp; Author Keywords evaluated:</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="181.232758" transform="rotate(-0 43.12368 181.232758)">• Confirmed E. multilocularis / HAE diagnosis</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="190.236214" transform="rotate(-0 43.12368 190.236214)">• Confirmed hepatic, biliary, or IVC involvement</text>
+   </g>
+   <g id="text_29">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="199.23967" transform="rotate(-0 43.12368 199.23967)">• Confirmed surgical, transplant, or interventional focus</text>
+   </g>
+   <g id="text_30">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="208.243126" transform="rotate(-0 43.12368 208.243126)">• Landmark ELRA &amp; hepatic surgery reviews retained</text>
+   </g>
+   <g id="text_31">
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: middle; fill: #c55a11" x="320.1372" y="162.826344" transform="rotate(-0 320.1372 162.826344)">Excluded Off-Topic Records (n = 91)</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="246.01248" y="172.229302" transform="rotate(-0 246.01248 172.229302)">• Pure Cystic Echinococcosis (E. granulosus),</text>
+   </g>
+   <g id="text_33">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="246.01248" y="181.232758" transform="rotate(-0 246.01248 181.232758)">  E. vogeli, or non-echinococcal trauma matched</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="246.01248" y="190.236214" transform="rotate(-0 246.01248 190.236214)">  only via WoS Keywords Plus (n = 46)</text>
+   </g>
+   <g id="text_35">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="246.01248" y="199.23967" transform="rotate(-0 246.01248 199.23967)">• Veterinary cases (dogs, sheep, primates) or</text>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="246.01248" y="208.243126" transform="rotate(-0 246.01248 208.243126)">  mouse/in-vitro preclinical studies (n = 31)</text>
+   </g>
+   <g id="text_37">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="246.01248" y="217.246582" transform="rotate(-0 246.01248 217.246582)">• Exclusively extrahepatic primary lesions (n = 14)</text>
+   </g>
+   <g id="text_38">
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: middle; fill: #4e8a6e" x="129.3012" y="249.756264" transform="rotate(-0 129.3012 249.756264)">Final Core HAE Surgical Dataset (n = 362)</text>
+   </g>
+   <g id="text_39">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="259.159222" transform="rotate(-0 43.12368 259.159222)">• Articles: n = 302 (83.4%)</text>
+   </g>
+   <g id="text_40">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="268.162678" transform="rotate(-0 43.12368 268.162678)">• Reviews: n = 60 (16.6%)</text>
+   </g>
+   <g id="text_41">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="277.166134" transform="rotate(-0 43.12368 277.166134)">• Total citations: 10,361 (CPP = 28.62)</text>
+   </g>
+   <g id="text_42">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="286.194965" transform="rotate(-0 43.12368 286.194965)">• H-index: 43 | Unique cited refs: 6,238</text>
+   </g>
+   <g id="text_43">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="295.173046" transform="rotate(-0 43.12368 295.173046)">• Time span: Jan 1, 2000 – Oct 31, 2026</text>
+   </g>
+   <g id="text_44">
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: middle; fill: #4e8a6e" x="320.1372" y="249.756264" transform="rotate(-0 320.1372 249.756264)">4D Thesaurus &amp; Entity Standardization</text>
+   </g>
+   <g id="text_45">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="246.01248" y="259.159222" transform="rotate(-0 246.01248 259.159222)">• Author disambiguation: merged inverted &amp;</text>
+   </g>
+   <g id="text_46">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="246.01248" y="268.162678" transform="rotate(-0 246.01248 268.162678)">  hyphenated names (Wen H, Aji T, Vuitton DA)</text>
+   </g>
+   <g id="text_47">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="246.01248" y="277.166134" transform="rotate(-0 246.01248 277.166134)">• Institution unification: merged affiliated</text>
+   </g>
+   <g id="text_48">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="246.01248" y="286.16959" transform="rotate(-0 246.01248 286.16959)">  hospitals with parent universities</text>
+   </g>
+   <g id="text_49">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="246.01248" y="295.173046" transform="rotate(-0 246.01248 295.173046)">• Keyword harmonization: unified ELRA,</text>
+   </g>
+   <g id="text_50">
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="246.01248" y="304.176502" transform="rotate(-0 246.01248 304.176502)">  hepatectomy, radical resection &amp; PNM terms</text>
+   </g>
+   <g id="patch_14">
+    <path d="M 225.51605 43.01568 
+Q 230.747272 43.01568 235.129436 43.01568 
+" style="fill: none; stroke: #404040; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 232.529436 41.39068 
+L 235.129436 43.01568 
+L 232.529436 44.64068 
+z
+" style="fill: #404040; stroke: #404040; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 129.10032 75.127936 
+Q 129.10032 77.941559 129.10032 79.906125 
+" style="fill: none; stroke: #404040; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 130.72532 77.306125 
+L 129.10032 79.906125 
+L 127.47532 77.306125 
+z
+" style="fill: #404040; stroke: #404040; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 225.51605 111.31776 
+Q 230.747272 111.31776 235.129436 111.31776 
+" style="fill: none; stroke: #404040; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 232.529436 109.69276 
+L 235.129436 111.31776 
+L 232.529436 112.94276 
+z
+" style="fill: #404040; stroke: #404040; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 129.10032 141.880576 
+Q 129.10032 145.467416 129.10032 148.205198 
+" style="fill: none; stroke: #404040; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 130.72532 145.605198 
+L 129.10032 148.205198 
+L 127.47532 145.605198 
+z
+" style="fill: #404040; stroke: #404040; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 225.51605 188.93376 
+Q 230.747272 188.93376 235.129436 188.93376 
+" style="fill: none; stroke: #404040; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 232.529436 187.30876 
+L 235.129436 188.93376 
+L 232.529436 190.55876 
+z
+" style="fill: #404040; stroke: #404040; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 129.10032 228.810496 
+Q 129.10032 232.397336 129.10032 235.135118 
+" style="fill: none; stroke: #404040; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 130.72532 232.535118 
+L 129.10032 235.135118 
+L 127.47532 232.535118 
+z
+" style="fill: #404040; stroke: #404040; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 225.51605 272.75904 
+Q 230.747272 272.75904 235.129436 272.75904 
+" style="fill: none; stroke: #404040; stroke-width: 0.9; stroke-linecap: round"/>
+    <path d="M 232.529436 271.13404 
+L 235.129436 272.75904 
+L 232.529436 274.38404 
+z
+" style="fill: #404040; stroke: #404040; stroke-width: 0.9; stroke-linecap: round"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p49ccade014">
+   <rect x="5.76" y="5.76" width="401.76" height="310.464"/>
+  </clipPath>
+ </defs>
+</svg>

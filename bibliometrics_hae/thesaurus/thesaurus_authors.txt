@@ -1,0 +1,153 @@
+label	replace by
+AJi, Tuerganaili	Aji, Tuerganaili
+Aili, Tuergan	Aji, Tuerganaili
+Aji, T	Aji, Tuerganaili
+Aji, T.	Aji, Tuerganaili
+Aji, Tuerganali	Aji, Tuerganaili
+Akhan, O	Akhan, Okan
+Akhan, O.	Akhan, Okan
+Ayifuhan, Ahan	Ahan, Ayifuhan
+Barth, Thomas E. E.	Barth, Thomas F. E.
+Barth, Thomas F.	Barth, Thomas F. E.
+Barth, Thomas Fe	Barth, Thomas F. E.
+Blagosklonov, O	Blagosklonov, Oleg
+Bo, Ran	Ran, Bo
+Bresson-Hadni, S	Bresson-Hadni, Solange
+Buttenschoen, K	Buttenschoen, Klaus
+Cai, Di-Ming	Cai, Diming
+Chai, Jin-Ping	Chai, Jinping
+Chen Zhe-yu	Chen, Zheyu
+Chen, Ke-Fei	Chen, Kefei
+Chen, Ke-fei	Chen, Kefei
+Chen, Zhe-Yu	Chen, Zheyu
+Chen, Zhe-yu	Chen, Zheyu
+Craig, P	Craig, Philip S.
+Craig, PS	Craig, Philip S.
+Delabrousse, E	Delabrousse, Eric
+Deplazes, P	Deplazes, Peter
+Dong Jia-hong	Dong, Jiahong
+Dong, J. -H.	Dong, Jiahong
+Dong, Jia-Hong	Dong, Jiahong
+Duan Wei-dong	Duan, Weidong
+Duan, W. -D.	Duan, Weidong
+Fan, Hai-Ning	Fan, Haining
+Fan, Hai-ning	Fan, Haining
+Feng, Jian-Guo	Feng, Jianguo
+Gottstein, B	Gottstein, Bruno
+Gottstein, B.	Gottstein, Bruno
+Guo, Q.	Guo, Qiang
+Hao Jingcheng	Hao, Jingcheng
+Hao, Wen	Wen, Hao
+He, Yi-Biao	He, Yibiao
+He, Yi-biao	He, Yibiao
+Hemphill, A	Hemphill, Andrew
+Hou, Li-Zhao	Hou, Lizhao
+Huang Bing	Huang, Bin
+Huang, Ji-wei	Huang, Jiwei
+Ito, A	Ito, Akira
+Ji Xue-wen	Ji, Xuewen
+Ji, X. -W.	Ji, Xuewen
+Ji, Xue-wen	Ji, Xuewen
+Jiang, T.	Jiang, Tiemin
+Jiang, Tie-Min	Jiang, Tiemin
+Jiang, Tie-min	Jiang, Tiemin
+Jiang, Tieming	Jiang, Tiemin
+Kern, P	Kern, Peter
+Kern, P.	Kern, Peter
+Lei Jianyong	Lei, Jianyong
+Li Bo	Li, Bo
+Li Tao	Li, Tao
+Li, B	Li, Bo
+Li, Jia-Xin	Li, Jiaxin
+Li, Jia-xin	Li, Jiaxin
+Li, T.	Li, Tao
+Li, Yong-Zhong	Li, Yongzhong
+Liang Yu-rong	Liang, Yurong
+Liang, Y. -R.	Liang, Yurong
+Lin, Ren-Yong	Lin, Renyong
+Liu, Lin-Xun	Liu, Linxun
+Liu, Lin-xun	Liu, Linxun
+Liu, Wen-Ya	Liu, Wenya
+Liu, Wen-ya	Liu, Wenya
+Lu, Xiao-Mei	Lu, Xiaomei
+Mantion, G	Mantion, Georges A.
+Mantion, GA	Mantion, Georges A.
+Mantion, Georges	Mantion, Georges A.
+Mantion, Georges Andre	Mantion, Georges A.
+McManus, D. P.	McManus, Donald P.
+McManus, DP	McManus, Donald P.
+Ozturk, G.	Ozturk, Gurkan
+Qin, Yong-De	Qin, Yongde
+Ran, B.	Ran, Bo
+Reuter, S	Reuter, Stefan
+Shao Ying-mei	Shao, Yingmei
+Shao, Y.	Shao, Yingmei
+Shao, Y. -M.	Shao, Yingmei
+Shao, Ying-Mei	Shao, Yingmei
+Shao, Ying-mei	Shao, Yingmei
+Tai Qin-wen	Tai, Qinwen
+Tai, Q. -W.	Tai, Qinwen
+Tai, Qin-wen	Tai, Qinwen
+Tuergan, Aili	Aji, Tuerganaili
+Tuerganaili, Aji	Aji, Tuerganaili
+Tuxun Tuer-hongjiang	Tuxun, Tuerhongjiang
+Tuxun, T.	Tuxun, Tuerhongjiang
+Vuitton, D. A.	Vuitton, Dominique Angele
+Vuitton, DA	Vuitton, Dominique Angele
+Vuitton, Dominique A.	Vuitton, Dominique Angele
+Vuitton, Dominique-Angele	Vuitton, Dominique Angele
+Wang Wen-tao	Wang, Wentao
+Wang Wentao	Wang, Wentao
+Wang, Hai-Jiu	Wang, Haijiu
+Wang, Hai-jiu	Wang, Haijiu
+Wang, Jun-Hua	Wang, Junhua
+Wang, Mao-Lin	Wang, Maolin
+Wang, WT	Wang, Wentao
+Wang, Wen-Tao	Wang, Wentao
+Wang, Wen-tao	Wang, Wentao
+Wang, WenTao	Wang, Wentao
+Wang, Xiao-Song	Wang, Xiaosong
+Wang, Zhi-xin	Wang, Zhixin
+Wei, Yong-gang	Wei, Yonggang
+Wen Hao	Wen, Hao
+Wen Tian-fu	Wen, Tianfu
+Wen, H	Wen, Hao
+Wen, H.	Wen, Hao
+Wen, TF	Wen, Tianfu
+Wen, Tian-fu	Wen, Tianfu
+Wen, Tingfu	Wen, Tianfu
+Xu Ming-qing	Xu, Mingqing
+Xu Mingqing	Xu, Mingqing
+Xu, Ming-qing	Xu, Mingqing
+Yan Lue-nan	Yan, Lunan
+Yan Lunan	Yan, Lunan
+Yan, LN	Yan, Lunan
+Yan, Lu-nan	Yan, Lunan
+Yan, Lunang	Yan, Lunan
+Yan, Lv-Nan	Yan, Lunan
+Yang Jia-yin	Yang, Jiayin
+Yang, JY	Yang, Jiayin
+Yang, Jia-Yin	Yang, Jiayin
+Yang, Jia-yin	Yang, Jiayin
+Yuan Ding	Yuan, Ding
+Zan, Run-Na	Zan, Runna
+Zeng Yong	Zeng, Yong
+Zhang Jin-hui	Zhang, Jinhui
+Zhang, J. -H.	Zhang, Jinhui
+Zhang, Jin-Hui	Zhang, Jinhui
+Zhang, Jin-hui	Zhang, Jinhui
+Zhang, Ling-Qiang	Zhang, Lingqiang
+Zhang, Ling-qiang	Zhang, Lingqiang
+Zhang, R.	Zhang, Ruiqing
+Zhang, Rui-Qing	Zhang, Ruiqing
+Zhang, Rui-qing	Zhang, Ruiqing
+Zhao Ji-chun	Zhao, Jichun
+Zhao Jichun	Zhao, Jichun
+Zhao Jin-ming	Zhao, Jinming
+Zhao, J. -M.	Zhao, Jinming
+Zhao, Jin-Ming	Zhao, Jinming
+Zhao, Jin-ming	Zhao, Jinming
+Zhao, Shun-Yun	Zhao, Shunyun
+Zhou, Rong-Xing	Zhou, Rongxing
+Zhu, H.	Zhu, Haihong
+Zhu, Hai-Hong	Zhu, Haihong

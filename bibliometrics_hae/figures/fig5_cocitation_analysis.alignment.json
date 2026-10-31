@@ -1,0 +1,78 @@
+{
+  "schema_version": 1,
+  "applicable": true,
+  "auditable": true,
+  "verdict": "PASS",
+  "backend": "python-matplotlib",
+  "summary": {
+    "fail": 0,
+    "warn": 0,
+    "comparisons": 1,
+    "exemptions": 0
+  },
+  "tolerances": {
+    "alignment_pt": 1.5,
+    "gutter_pt": 1.5
+  },
+  "layout": {
+    "schema_version": 1,
+    "backend": "python-matplotlib",
+    "figure": {
+      "width_pt": 518.4,
+      "height_pt": 241.20000000000002
+    },
+    "panels": [
+      {
+        "id": "a",
+        "bbox_pt": [
+          31.104,
+          33.76800000000001,
+          205.19355223880595,
+          212.25600000000003
+        ],
+        "grid_id": "matplotlib-grid-1",
+        "row_start": 0,
+        "row_stop": 1,
+        "col_start": 0,
+        "col_stop": 1,
+        "panel_label": "a",
+        "panel_label_anchor_pt": [
+          15.104,
+          218.256
+        ]
+      },
+      {
+        "id": "b",
+        "bbox_pt": [
+          323.574447761194,
+          33.76800000000001,
+          497.664,
+          212.25600000000003
+        ],
+        "grid_id": "matplotlib-grid-1",
+        "row_start": 0,
+        "row_stop": 1,
+        "col_start": 1,
+        "col_stop": 2,
+        "panel_label": "b",
+        "panel_label_anchor_pt": [
+          277.57444776119405,
+          218.256
+        ]
+      }
+    ],
+    "row_groups": [
+      {
+        "id": "row-1",
+        "panels": [
+          "a",
+          "b"
+        ]
+      }
+    ],
+    "column_groups": [],
+    "boundary_groups": [],
+    "exemptions": []
+  },
+  "findings": []
+}
