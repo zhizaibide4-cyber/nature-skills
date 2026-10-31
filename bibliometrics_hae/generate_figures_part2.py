@@ -57,6 +57,96 @@ mpl.rcParams.update({
 })
 
 
+# Generic disease-name terms (e.g. "alveolar echinococcosis") occur in most records and are
+# deliberately excluded from every theme so that theme counts reflect clinical content.
+THEMES = {
+    "ELRA & vascular reconstruction": {
+        "terms": {
+            "ex vivo liver resection and autotransplantation", "inferior vena cava",
+            "vascular reconstruction", "budd-chiari syndrome", "venovenous bypass",
+            "retrohepatic inferior vena cava resection", "inferior vena cava replacement",
+        },
+        "tick": "ELRA/\nvascular", "short": "ELRA & vascular", "color": PAL["coral"],
+        "label_offset": (-7, 0, "right"),
+    },
+    "Hepatectomy & postoperative outcomes": {
+        "terms": {
+            "hepatectomy", "surgical treatment", "radical resection", "postoperative complications",
+            "biliary complications", "palliative surgery", "outcomes", "radical hepatic resection",
+            "palliative hepatic resection", "survival", "prognosis",
+        },
+        "tick": "Hepat-\nectomy", "short": "Hepatectomy", "color": PAL["amber"],
+        "label_offset": (0, 9, "center"),
+    },
+    "Liver transplantation & recurrence": {
+        "terms": {
+            "liver transplantation", "transplantation", "living donor liver transplantation",
+            "recurrence", "follow-up", "immunosuppression", "graft", "donor liver",
+        },
+        "tick": "LTx/\nrecurr.", "short": "LTx & recurrence", "color": PAL["teal"],
+        "label_offset": (0, -11, "center"),
+    },
+    "Staging & imaging": {
+        "terms": {
+            "diagnosis", "classification", "computed tomography", "pet/ct", "ultrasonography",
+            "magnetic resonance imaging", "mri findings", "contrast-enhanced ultrasound", "fdg-pet",
+            "18f-fdg pet", "f-18-fdg pet/ct", "pet",
+        },
+        "tick": "Staging/\nimaging", "short": "Staging & imaging", "color": PAL["blue"],
+        "label_offset": (0, 9, "center"),
+    },
+    "Antiparasitic therapy": {
+        "terms": {"albendazole", "antiparasitic therapy", "benzimidazoles", "mebendazole"},
+        "tick": "Anti-\nparasitic", "short": "Albendazole", "color": PAL["plum"],
+        "label_offset": (0, 9, "center"),
+    },
+    "Minimally invasive & interventional": {
+        "terms": {
+            "laparoscopic hepatectomy", "laparoscopic treatment", "laparoscopic approach",
+            "laparoscopic pericystectomy", "robotic liver surgery", "robotic surgery",
+            "robotic liver resection", "minimally invasive surgery", "minimally invasive",
+            "minimally invasive liver surgery", "percutaneous treatment", "percutaneous drainage",
+            "microwave ablation", "radiofrequency ablation", "radiofrequency thermal ablation",
+            "endoscopic retrograde cholangiopancreatography",
+            "endoscopic retrograde cholangio-pancreatography (ercp)", "endoscopic management",
+            "biliary drainage", "biliary stent",
+        },
+        "tick": "Minimally\ninvasive", "short": "Minimally invasive", "color": PAL["sage"],
+        "label_offset": (0, 9, "center"),
+    },
+}
+
+
+def record_keywords(d):
+    kws = set()
+    for tag in ("DE", "ID"):
+        if d.get(tag):
+            kws.update(x.strip().lower() for x in " ".join(d[tag]).split(";") if x.strip())
+    return kws
+
+
+def compute_callon_metrics(kw_counts, kw_edges, min_freq=3):
+    """Callon centrality (10 x sum of external equivalence indices) and density
+    (100 x sum of internal equivalence indices / number of theme terms), with
+    equivalence index e_ij = c_ij^2 / (c_i * c_j) over keywords occurring >= min_freq times."""
+    vocab = {k for k, v in kw_counts.items() if v >= min_freq}
+    metrics = {}
+    for t_name, t in THEMES.items():
+        members = t["terms"] & vocab
+        ext, internal = 0.0, 0.0
+        for (k1, k2), c in kw_edges.items():
+            if k1 not in vocab or k2 not in vocab:
+                continue
+            e = c * c / (kw_counts[k1] * kw_counts[k2])
+            in1, in2 = k1 in members, k2 in members
+            if in1 and in2:
+                internal += e
+            elif in1 or in2:
+                ext += e
+        metrics[t_name] = (10.0 * ext, 100.0 * internal / max(len(members), 1))
+    return metrics
+
+
 def export_figure(fig, basename, single_panel=False, row_groups=None, column_groups=None, exclude_axes=()):
     base_path = os.path.join(OUT_FIG_DIR, basename)
     if not single_panel:
@@ -227,8 +317,9 @@ def build_fig4_authors_journals(records):
     ax_d.xaxis.set_major_formatter(mpl.ticker.ScalarFormatter())
     ax_d.xaxis.set_minor_formatter(mpl.ticker.NullFormatter())
     ax_d.tick_params(axis="x", which="minor", bottom=False)
-    ax_d.set_xticks([1, 5, 17, 63, 170])
-    ax_d.set_xticklabels(["1", "5", "17", "63", "170"])
+    bradford_ticks = [1, 5, z1_end, z2_end, len(ranks)]
+    ax_d.set_xticks(bradford_ticks)
+    ax_d.set_xticklabels([str(t) for t in bradford_ticks])
     ax_d.set_xlabel("Journal rank (log scale)")
     ax_d.set_ylabel("Cumulative publications (n)")
     ax_d.set_title("Bradford's law journal zones", pad=6)
@@ -357,59 +448,12 @@ def build_fig6_keyword_cooccurrence(records):
     kw_counts = Counter()
     kw_years = defaultdict(list)
     kw_edges = Counter()
-
-    # Define 4 clinical surgery thematic clusters
-    CLUSTERS = {
-        "Cluster 1: ELRA & Vascular Reconstruction": {
-            "ex vivo liver resection and autotransplantation",
-            "inferior vena cava",
-            "vascular reconstruction",
-            "budd-chiari syndrome",
-            "three-dimensional reconstruction",
-        },
-        "Cluster 2: Radical Hepatectomy & Outcomes": {
-            "hepatic alveolar echinococcosis",
-            "hepatectomy",
-            "surgical treatment",
-            "radical resection",
-            "postoperative complications",
-            "biliary complications",
-            "palliative surgery",
-            "outcomes",
-        },
-        "Cluster 3: Allogeneic/Living-Donor LTx & Follow-up": {
-            "liver transplantation",
-            "transplantation",
-            "living donor liver transplantation",
-            "recurrence",
-            "follow-up",
-            "experience",
-            "immunosuppression",
-        },
-        "Cluster 4: PNM Staging, Imaging & Albendazole": {
-            "alveolar echinococcosis",
-            "echinococcus multilocularis",
-            "diagnosis",
-            "classification",
-            "albendazole",
-            "computed tomography",
-            "pet/ct",
-            "ultrasonography",
-            "magnetic resonance imaging",
-            "antiparasitic therapy",
-        },
-    }
-
-    cluster_phase_counts = {c: [0, 0, 0] for c in CLUSTERS}
+    theme_phase_counts = {t: [0, 0, 0] for t in THEMES}
 
     for d in records:
         py = int(d["PY"][0].strip())
         phase_idx = 0 if py <= 2009 else (1 if py <= 2018 else 2)
-        kws = set()
-        if d.get("DE"):
-            kws.update(x.strip().lower() for x in " ".join(d["DE"]).split(";") if x.strip())
-        if d.get("ID"):
-            kws.update(x.strip().lower() for x in " ".join(d["ID"]).split(";") if x.strip())
+        kws = record_keywords(d)
 
         for k in kws:
             kw_counts[k] += 1
@@ -417,17 +461,28 @@ def build_fig6_keyword_cooccurrence(records):
         for k1, k2 in combinations(sorted(kws), 2):
             kw_edges[(k1, k2)] += 1
 
-        for c_name, c_set in CLUSTERS.items():
-            if kws & c_set:
-                cluster_phase_counts[c_name][phase_idx] += 1
+        for t_name, t in THEMES.items():
+            if kws & t["terms"]:
+                theme_phase_counts[t_name][phase_idx] += 1
 
-    # Save source data
+    callon = compute_callon_metrics(kw_counts, kw_edges)
+
     with open(os.path.join(OUT_SRC_DIR, "fig6_keywords_clusters.csv"), "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(["Keyword", "Frequency", "Mean_Publication_Year"])
         for k, cnt in kw_counts.most_common(30):
             apy = round(sum(kw_years[k]) / len(kw_years[k]), 2)
             w.writerow([k, cnt, apy])
+
+    with open(os.path.join(OUT_SRC_DIR, "fig6_theme_callon_metrics.csv"), "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["Theme", "Terms", "Records_with_theme", "Callon_Centrality", "Callon_Density",
+                    "Records_2000_2009", "Records_2010_2018", "Records_2019_2026"])
+        for t_name, t in THEMES.items():
+            c, dens = callon[t_name]
+            w.writerow([t_name, "; ".join(sorted(t["terms"])), sum(theme_phase_counts[t_name]),
+                        round(c, 3), round(dens, 3)]
+                       + theme_phase_counts[t_name])
 
     fig = plt.figure(figsize=(7.2, 6.0))
     gs = fig.add_gridspec(2, 2, left=0.20, right=0.96, bottom=0.08, top=0.93, wspace=0.42, hspace=0.38)
@@ -467,14 +522,11 @@ def build_fig6_keyword_cooccurrence(records):
     }
     kw_cols = {}
     for k in net_kws:
-        if k in CLUSTERS["Cluster 1: ELRA & Vascular Reconstruction"]:
-            kw_cols[k] = PAL["coral"]
-        elif k in CLUSTERS["Cluster 2: Radical Hepatectomy & Outcomes"]:
-            kw_cols[k] = PAL["amber"]
-        elif k in CLUSTERS["Cluster 3: Allogeneic/Living-Donor LTx & Follow-up"]:
-            kw_cols[k] = PAL["teal"]
-        else:
-            kw_cols[k] = PAL["blue"]
+        kw_cols[k] = PAL["grey"]
+        for t in THEMES.values():
+            if k in t["terms"]:
+                kw_cols[k] = t["color"]
+                break
 
     draw_radial_network(ax_a, net_kws, kw_counts, kw_edges, kw_cols, short_labels=short_kw, size_scale=0.45)
     ax_a.set_title("Core keyword co-occurrence network", pad=6)
@@ -522,56 +574,53 @@ def build_fig6_keyword_cooccurrence(records):
     ax_b.set_xlabel("Average publication year (APY)")
     ax_b.set_title("Temporal shift of surgical & clinical terms", pad=6)
 
-    # --- Panel c: Evolution of the 4 Major Thematic Clusters Across 3 Phases ---
-    c_short_names = [
-        "C1: ELRA\n& IVC",
-        "C2: Radical\nHepatect",
-        "C3: Allo-LTx\n& Follow-up",
-        "C4: Staging\n& ABZ",
-    ]
-    c_full_keys = list(CLUSTERS.keys())
-    x_c = np.arange(len(c_short_names))
-    w_bar = 0.24
-    p1_vals = [cluster_phase_counts[k][0] for k in c_full_keys]
-    p2_vals = [cluster_phase_counts[k][1] for k in c_full_keys]
-    p3_vals = [cluster_phase_counts[k][2] for k in c_full_keys]
+    # --- Panel c: Theme trajectories across the three phases ---
+    t_names = list(THEMES.keys())
+    x_c = np.arange(len(t_names))
+    w_bar = 0.26
+    p1_vals = [theme_phase_counts[k][0] for k in t_names]
+    p2_vals = [theme_phase_counts[k][1] for k in t_names]
+    p3_vals = [theme_phase_counts[k][2] for k in t_names]
 
     ax_c.bar(x_c - w_bar, p1_vals, width=w_bar, color=PAL["sky"], label="2000–2009")
     ax_c.bar(x_c, p2_vals, width=w_bar, color=PAL["blue"], label="2010–2018")
     ax_c.bar(x_c + w_bar, p3_vals, width=w_bar, color=PAL["coral"], label="2019–2026")
     ax_c.set_xticks(x_c)
-    ax_c.set_xticklabels(c_short_names, fontsize=5.3)
-    ax_c.set_ylim(0, 175)
-    ax_c.set_ylabel("Publications involving cluster (n)")
+    ax_c.set_xticklabels([THEMES[k]["tick"] for k in t_names], fontsize=5.2)
+    ax_c.set_ylim(0, max(max(p1_vals), max(p2_vals), max(p3_vals)) * 1.32)
+    ax_c.set_ylabel("Publications mentioning theme (n)")
     ax_c.legend(loc="upper left", fontsize=5.5)
-    ax_c.set_title("Cluster trajectory across three eras", pad=6)
+    ax_c.set_title("Theme trajectory across three phases", pad=6)
 
-    # --- Panel d: Thematic Strategic Diagram (Callon Centrality vs Density) ---
-    ax_d.axhline(0.50, color="#D0D7DE", linestyle="-", linewidth=0.7, zorder=1)
-    ax_d.axvline(0.50, color="#D0D7DE", linestyle="-", linewidth=0.7, zorder=1)
+    # --- Panel d: Strategic diagram from computed Callon centrality and density ---
+    cents = np.array([callon[k][0] for k in t_names])
+    dens = np.array([callon[k][1] for k in t_names])
+    med_c, med_d = float(np.median(cents)), float(np.median(dens))
+    ax_d.axhline(med_d, color="#D0D7DE", linestyle="-", linewidth=0.7, zorder=1)
+    ax_d.axvline(med_c, color="#D0D7DE", linestyle="-", linewidth=0.7, zorder=1)
 
-    themes = [
-        # (x_centrality, y_density, size, color, label, offset_y)
-        (0.77, 0.84, 95, PAL["coral"], "Radical Hepatectomy", -0.10),
-        (0.73, 0.65, 85, PAL["coral"], "ELRA & IVC Reconstr", -0.10),
-        (0.78, 0.40, 110, PAL["blue"], "PNM Staging & ABZ", -0.10),
-        (0.72, 0.22, 80, PAL["teal"], "Allogeneic LTx", -0.09),
-        (0.24, 0.78, 65, PAL["plum"], "PET/CT Viability", -0.11),
-        (0.25, 0.28, 70, PAL["amber"], "3D / ICG / Laparosc", -0.11),
-    ]
-    for cx, cy, sz, col, lbl, dy in themes:
-        ax_d.scatter([cx], [cy], s=sz, color=col, alpha=0.88, edgecolors="none", zorder=3)
-        ax_d.text(cx, cy + dy, lbl, ha="center", va="center", fontsize=5.3, fontweight="bold", color="#222222", zorder=4)
+    x_pad = (cents.max() - cents.min()) * 0.30
+    y_pad = (dens.max() - dens.min()) * 0.30
+    x_lo, x_hi = cents.min() - x_pad, cents.max() + x_pad
+    y_hi = dens.max() + y_pad
+    y_lo = -0.16 * y_hi
+    for k, cx, cy in zip(t_names, cents, dens):
+        n_rec = sum(theme_phase_counts[k])
+        ax_d.scatter([cx], [cy], s=20 + 0.9 * n_rec, color=THEMES[k]["color"], alpha=0.88, edgecolors="none", zorder=3)
+        dx, dy, ha = THEMES[k]["label_offset"]
+        ax_d.annotate(THEMES[k]["short"], xy=(cx, cy), xytext=(dx, dy), textcoords="offset points",
+                      ha=ha, va="center", fontsize=5.3, fontweight="bold", color="#222222", zorder=4)
 
-    ax_d.text(0.97, 0.96, "Motor Themes", ha="right", va="top", fontsize=5.3, color=PAL["coral"], fontweight="bold")
-    ax_d.text(0.03, 0.96, "Niche Themes", ha="left", va="top", fontsize=5.3, color=PAL["plum"], fontweight="bold")
-    ax_d.text(0.97, 0.03, "Basic / Transversal", ha="right", va="bottom", fontsize=5.3, color=PAL["blue"], fontweight="bold")
-    ax_d.text(0.03, 0.03, "Emerging / Declining", ha="left", va="bottom", fontsize=5.3, color=PAL["amber"], fontweight="bold")
+    ax_d.text(0.97, 0.97, "Motor", transform=ax_d.transAxes, ha="right", va="top", fontsize=5.3, color=PAL["coral"], fontweight="bold")
+    ax_d.text(0.03, 0.97, "Niche", transform=ax_d.transAxes, ha="left", va="top", fontsize=5.3, color=PAL["plum"], fontweight="bold")
+    ax_d.text(0.97, 0.03, "Basic", transform=ax_d.transAxes, ha="right", va="bottom", fontsize=5.3, color=PAL["blue"], fontweight="bold")
+    ax_d.text(0.03, 0.03, "Emerging/declining", transform=ax_d.transAxes, ha="left", va="bottom", fontsize=5.3, color=PAL["amber"], fontweight="bold")
 
-    ax_d.set_xlim(0.0, 1.0)
-    ax_d.set_ylim(0.0, 1.0)
-    ax_d.set_xlabel("Callon centrality (relevance degree)")
-    ax_d.set_ylabel("Callon density (development degree)")
+    ax_d.set_xlim(x_lo, x_hi)
+    ax_d.set_ylim(y_lo, y_hi)
+    ax_d.set_yticks([t for t in ax_d.get_yticks() if 0 <= t <= y_hi])
+    ax_d.set_xlabel("Callon centrality (external links)")
+    ax_d.set_ylabel("Callon density (internal links)")
     ax_d.set_title("Thematic strategic diagram", pad=6)
 
     add_panel_label(fig, ax_a, "a", dx_pt=-45, dy_pt=6)
@@ -587,7 +636,7 @@ def build_fig6_keyword_cooccurrence(records):
 
 
 # ===========================================================================
-# FIGURE 7: Top 20 Burst Keywords (2000-2026) & Surgical Modality Heatmap
+# FIGURE 7: Curated Keyword Bursts (2000-2026) & Surgical Modality Heatmap
 # ===========================================================================
 def build_fig7_keyword_bursts(records):
     years = list(range(2000, 2027))
@@ -684,7 +733,7 @@ def build_fig7_keyword_bursts(records):
     ax_a = fig.add_subplot(gs[0, 0])
     ax_b = fig.add_subplot(gs[0, 1])
 
-    # --- Panel a: Top 20 Keywords with the Strongest Citation Bursts ---
+    # --- Panel a: LLR keyword bursts for 20 curated clinical terms ---
     rev_rows = burst_rows[::-1]
     short_burst_lbl = {
         "ex vivo liver resection and autotransplantation": "ELRA (autotransplantation)",
@@ -712,35 +761,39 @@ def build_fig7_keyword_bursts(records):
     ax_a.set_xlim(1999.5, 2036.5)
     ax_a.set_xticks([2000, 2005, 2010, 2015, 2020, 2026])
     ax_a.set_xlabel("Timeline (2000–2026) & burst strength")
-    ax_a.set_title("Top 20 keywords with citation bursts", pad=6)
+    ax_a.set_title("Keyword bursts (20 curated clinical terms)", pad=6)
 
     # --- Panel b: Surgical & Clinical Modality Shift Across 5 Periods ---
     periods = ["2000–05", "2006–10", "2011–15", "2016–20", "2021–26"]
     period_ranges = [(2000, 2005), (2006, 2010), (2011, 2015), (2016, 2020), (2021, 2026)]
+    mi_terms = THEMES["Minimally invasive & interventional"]["terms"]
     modalities = [
-        ("ELRA / Autotransplant", {"ex vivo liver resection and autotransplantation"}),
-        ("Vascular / IVC Reconstr", {"vascular reconstruction", "inferior vena cava"}),
-        ("Radical Hepatectomy", {"hepatectomy", "radical resection"}),
-        ("Allogeneic / LDLT", {"liver transplantation", "living donor liver transplantation", "transplantation"}),
-        ("Laparoscopic / 3D / ICG", {"laparoscopic hepatectomy", "three-dimensional reconstruction", "microwave ablation"}),
-        ("PNM Staging & Imaging", {"classification", "computed tomography", "magnetic resonance imaging", "ultrasonography"}),
-        ("18F-FDG PET/CT", {"pet/ct"}),
-        ("Albendazole Therapy", {"albendazole", "antiparasitic therapy", "benzimidazoles"}),
+        ("ELRA", {"ex vivo liver resection and autotransplantation"}),
+        ("Vascular / IVC", {"vascular reconstruction", "inferior vena cava"}),
+        ("Hepatectomy", {"hepatectomy", "radical resection"}),
+        ("Liver transplantation", {"liver transplantation", "living donor liver transplantation", "transplantation"}),
+        ("Laparoscopic / robotic", {k for k in mi_terms if "laparoscop" in k or "robotic" in k or "minimally" in k}),
+        ("Percutaneous / ERCP", {k for k in mi_terms if not ("laparoscop" in k or "robotic" in k or "minimally" in k)}),
+        ("Staging, CT/MRI/US", {"classification", "computed tomography", "magnetic resonance imaging", "ultrasonography"}),
+        ("18F-FDG PET/CT", {"pet/ct", "fdg-pet", "18f-fdg pet", "f-18-fdg pet/ct", "pet"}),
+        ("Albendazole", {"albendazole", "antiparasitic therapy", "benzimidazoles"}),
     ]
 
     mat = np.zeros((len(modalities), len(periods)), dtype=int)
     for d in records:
         py = int(d["PY"][0].strip())
-        kws = set()
-        if d.get("DE"):
-            kws.update(x.strip().lower() for x in " ".join(d["DE"]).split(";") if x.strip())
-        if d.get("ID"):
-            kws.update(x.strip().lower() for x in " ".join(d["ID"]).split(";") if x.strip())
+        kws = record_keywords(d)
         for p_idx, (y_start, y_end) in enumerate(period_ranges):
             if y_start <= py <= y_end:
                 for m_idx, (_, m_set) in enumerate(modalities):
                     if kws & m_set:
                         mat[m_idx, p_idx] += 1
+
+    with open(os.path.join(OUT_SRC_DIR, "fig7b_modality_heatmap.csv"), "w", newline="", encoding="utf-8") as f:
+        w = csv.writer(f)
+        w.writerow(["Modality", "Terms"] + periods)
+        for (m_name, m_set), row in zip(modalities, mat):
+            w.writerow([m_name, "; ".join(sorted(m_set))] + [int(v) for v in row])
 
     im = ax_b.imshow(mat, cmap="YlGnBu", aspect="auto")
     ax_b.set_xticks(np.arange(len(periods)))

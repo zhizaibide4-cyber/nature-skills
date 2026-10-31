@@ -117,7 +117,25 @@ def export_figure(fig, basename, single_panel=False, row_groups=None, column_gro
 # ===========================================================================
 # FIGURE 1: PRISMA 2020 Flowchart & Standardization Pipeline
 # ===========================================================================
-def build_fig1_prisma():
+def dataset_stats(records):
+    n = len(records)
+    reviews = sum(1 for d in records if "Review" in " ".join(d.get("DT", [])))
+    tcs = [int(d["TC"][0].strip()) if d.get("TC") and d["TC"][0].strip().isdigit() else 0 for d in records]
+    crs = {x.strip() for d in records for x in d.get("CR", []) if x.strip()}
+    return {
+        "n": n,
+        "articles": n - reviews,
+        "articles_pct": 100.0 * (n - reviews) / n,
+        "reviews": reviews,
+        "reviews_pct": 100.0 * reviews / n,
+        "tc": sum(tcs),
+        "cpp": sum(tcs) / n,
+        "h": calc_h_index(tcs),
+        "n_cr": len(crs),
+    }
+
+
+def build_fig1_prisma(stats):
     fig, ax = plt.subplots(figsize=(7.2, 5.6))
     ax.set_xlim(0, 100)
     ax.set_ylim(0, 100)
@@ -171,12 +189,12 @@ def build_fig1_prisma():
     # Step 1: Identification
     draw_box(
         7.5, 78.5, 46.5, 19.0,
-        "Web of Science Core Collection (SCIE)",
+        "Web of Science Core Collection",
         [
             "Search span: Jan 1, 2000 to Oct 31, 2026",
-            "Query: (alveolar echinococcosis OR E. multilocularis)",
-            "  AND (liver OR hepatic) AND (surgery OR ELRA)",
-            "Initial records retrieved: n = 456 (Article / Review)"
+            "Topic search (TS): AE / E. multilocularis terms",
+            "  AND hepatic surgical terms (full string in Methods)",
+            "Records exported (full record + CR): n = 456"
         ],
         fc="#F4F8FC", ec=PAL["navy"], title_color=PAL["navy"]
     )
@@ -257,10 +275,10 @@ def build_fig1_prisma():
         7.5, 3.0, 46.5, 22.0,
         "Final Core HAE Surgical Dataset (n = 362)",
         [
-            "• Original research articles: n = 304 (84.0%)",
-            "• Clinical reviews & guidelines: n = 58 (16.0%)",
-            "• Total citations: 10,361 (Mean CPP = 28.62)",
-            "• Dataset H-index: 43 | Co-cited refs: 6,842",
+            f"• Articles: n = {stats['articles']} ({stats['articles_pct']:.1f}%)",
+            f"• Reviews: n = {stats['reviews']} ({stats['reviews_pct']:.1f}%)",
+            f"• Total citations: {stats['tc']:,} (CPP = {stats['cpp']:.2f})",
+            f"• H-index: {stats['h']} | Unique cited refs: {stats['n_cr']:,}",
             "• Time span: Jan 1, 2000 – Oct 31, 2026"
         ],
         fc="#EFF7F2", ec=PAL["sage"], title_color=PAL["sage"]
@@ -330,9 +348,12 @@ def build_fig2_annual_trends(records):
     ax_a.set_xticks([2000, 2005, 2010, 2015, 2020, 2026])
 
     # Place phase labels cleanly inside each span above bars and cumulative line
-    ax_a.text(2004.5, 41.5, "Phase I (00–09)\n6.0/yr", ha="center", va="top", fontsize=5.4, color=PAL["slate"])
-    ax_a.text(2014.0, 41.5, "Phase II (10–18)\n11.4/yr", ha="center", va="top", fontsize=5.4, color=PAL["navy"])
-    ax_a.text(2022.6, 41.5, "Phase III (19–26)\n24.8/yr", ha="center", va="top", fontsize=5.4, color=PAL["coral"], fontweight="bold")
+    def phase_mean(y0, y1):
+        return sum(pub_cnt[y] for y in range(y0, y1 + 1)) / (y1 - y0 + 1)
+
+    ax_a.text(2004.5, 41.5, f"Phase I (00–09)\n{phase_mean(2000, 2009):.1f}/yr", ha="center", va="top", fontsize=5.4, color=PAL["slate"])
+    ax_a.text(2014.0, 41.5, f"Phase II (10–18)\n{phase_mean(2010, 2018):.1f}/yr", ha="center", va="top", fontsize=5.4, color=PAL["navy"])
+    ax_a.text(2022.6, 41.5, f"Phase III (19–26)\n{phase_mean(2019, 2026):.1f}/yr", ha="center", va="top", fontsize=5.4, color=PAL["coral"], fontweight="bold")
 
     ax_a2 = ax_a.twinx()
     ax_a2.spines["top"].set_visible(False)
@@ -364,19 +385,19 @@ def build_fig2_annual_trends(records):
     ax_b2.tick_params(axis="y", colors=PAL["coral"])
 
     ax_b.annotate(
-        "2003: European LTx\nreport (772 cites)",
+        "2003: 772 cites\n(12 papers combined)",
         xy=(2003, 790), xytext=(2000.0, 1320),
         fontsize=5.5, color=PAL["navy"],
         arrowprops=dict(arrowstyle="->", lw=0.6, color=PAL["navy"]),
     )
     ax_b.annotate(
-        "2010: WHO-IWGE\nconsensus (1,955 cites)",
+        "2010: 1,955 cites\n(1,617 in Brunetti et al.)",
         xy=(2010, 1965), xytext=(2011.8, 1980),
         fontsize=5.5, fontweight="bold", color=PAL["coral"],
         arrowprops=dict(arrowstyle="->", lw=0.6, color=PAL["coral"]),
     )
     ax_b.annotate(
-        "2019: CMR review &\nELRA surge (1,145 cites)",
+        "2019: 1,145 cites\n(918 in Wen et al.)",
         xy=(2019, 1160), xytext=(2015.8, 1540),
         fontsize=5.5, color=PAL["navy"],
         arrowprops=dict(arrowstyle="->", lw=0.6, color=PAL["navy"]),
@@ -575,7 +596,7 @@ def build_fig3_countries_institutions(records):
 def main():
     raw_recs = parse_wos_records(STRICT_PATH)
     records = [parse_fields(r)[0] for r in raw_recs]
-    build_fig1_prisma()
+    build_fig1_prisma(dataset_stats(records))
     build_fig2_annual_trends(records)
     build_fig3_countries_institutions(records)
 

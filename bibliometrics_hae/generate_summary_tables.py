@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Generates comprehensive bibliometric statistical tables from the cleaned HAE datasets
-(both the Strict PRISMA-filtered dataset N=377 and the Full non-retracted dataset N=453)
+(both the Strict PRISMA-filtered dataset N=362 and the Full non-retracted dataset N=453)
 for direct inclusion in the SCI manuscript.
 """
 

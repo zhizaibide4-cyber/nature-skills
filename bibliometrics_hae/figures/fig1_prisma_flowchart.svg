@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-31T02:09:49.031236</dc:date>
+    <dc:date>2026-10-31T15:00:00.009970</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -35,7 +35,7 @@ L 29.06208 70.95744
 L 29.06208 13.5216 
 L 9.7776 13.5216 
 z
-" clip-path="url(#pef9957b0ab)" style="fill: #1f4e78"/>
+" clip-path="url(#p49ccade014)" style="fill: #1f4e78"/>
    </g>
    <g id="patch_3">
     <path d="M 9.7776 139.25952 
@@ -43,7 +43,7 @@ L 29.06208 139.25952
 L 29.06208 83.376 
 L 9.7776 83.376 
 z
-" clip-path="url(#pef9957b0ab)" style="fill: #2e75b6"/>
+" clip-path="url(#p49ccade014)" style="fill: #2e75b6"/>
    </g>
    <g id="patch_4">
     <path d="M 9.7776 226.18944 
@@ -51,7 +51,7 @@ L 29.06208 226.18944
 L 29.06208 151.67808 
 L 9.7776 151.67808 
 z
-" clip-path="url(#pef9957b0ab)" style="fill: #2a788e"/>
+" clip-path="url(#p49ccade014)" style="fill: #2a788e"/>
    </g>
    <g id="patch_5">
     <path d="M 9.7776 306.91008 
@@ -59,7 +59,7 @@ L 29.06208 306.91008
 L 29.06208 238.608 
 L 9.7776 238.608 
 z
-" clip-path="url(#pef9957b0ab)" style="fill: #4e8a6e"/>
+" clip-path="url(#p49ccade014)" style="fill: #4e8a6e"/>
    </g>
    <g id="patch_6">
     <path d="M 35.892 72.50976 
@@ -67,7 +67,7 @@ L 222.7104 72.50976
 L 222.7104 13.5216 
 L 35.892 13.5216 
 z
-" clip-path="url(#pef9957b0ab)" style="fill: #f4f8fc; stroke: #1f4e78; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#p49ccade014)" style="fill: #f4f8fc; stroke: #1f4e78; stroke-width: 0.9; stroke-linejoin: miter"/>
    </g>
    <g id="patch_7">
     <path d="M 238.7808 72.50976 
@@ -75,7 +75,7 @@ L 401.4936 72.50976
 L 401.4936 13.5216 
 L 238.7808 13.5216 
 z
-" clip-path="url(#pef9957b0ab)" style="fill: #f9fafb; stroke: #bfbfbf; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#p49ccade014)" style="fill: #f9fafb; stroke: #bfbfbf; stroke-width: 0.9; stroke-linejoin: miter"/>
    </g>
    <g id="patch_8">
     <path d="M 35.892 139.25952 
@@ -83,7 +83,7 @@ L 222.7104 139.25952
 L 222.7104 83.376 
 L 35.892 83.376 
 z
-" clip-path="url(#pef9957b0ab)" style="fill: #f4f8fc; stroke: #2e75b6; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#p49ccade014)" style="fill: #f4f8fc; stroke: #2e75b6; stroke-width: 0.9; stroke-linejoin: miter"/>
    </g>
    <g id="patch_9">
     <path d="M 238.7808 139.25952 
@@ -91,7 +91,7 @@ L 401.4936 139.25952
 L 401.4936 83.376 
 L 238.7808 83.376 
 z
-" clip-path="url(#pef9957b0ab)" style="fill: #fdf3ee; stroke: #c55a11; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#p49ccade014)" style="fill: #fdf3ee; stroke: #c55a11; stroke-width: 0.9; stroke-linejoin: miter"/>
    </g>
    <g id="patch_10">
     <path d="M 35.892 226.18944 
@@ -99,7 +99,7 @@ L 222.7104 226.18944
 L 222.7104 151.67808 
 L 35.892 151.67808 
 z
-" clip-path="url(#pef9957b0ab)" style="fill: #f2f9f9; stroke: #2a788e; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#p49ccade014)" style="fill: #f2f9f9; stroke: #2a788e; stroke-width: 0.9; stroke-linejoin: miter"/>
    </g>
    <g id="patch_11">
     <path d="M 238.7808 226.18944 
@@ -107,7 +107,7 @@ L 401.4936 226.18944
 L 401.4936 151.67808 
 L 238.7808 151.67808 
 z
-" clip-path="url(#pef9957b0ab)" style="fill: #fdf3ee; stroke: #c55a11; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#p49ccade014)" style="fill: #fdf3ee; stroke: #c55a11; stroke-width: 0.9; stroke-linejoin: miter"/>
    </g>
    <g id="patch_12">
     <path d="M 35.892 306.91008 
@@ -115,7 +115,7 @@ L 222.7104 306.91008
 L 222.7104 238.608 
 L 35.892 238.608 
 z
-" clip-path="url(#pef9957b0ab)" style="fill: #eff7f2; stroke: #4e8a6e; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#p49ccade014)" style="fill: #eff7f2; stroke: #4e8a6e; stroke-width: 0.9; stroke-linejoin: miter"/>
    </g>
    <g id="patch_13">
     <path d="M 238.7808 306.91008 
@@ -123,7 +123,7 @@ L 401.4936 306.91008
 L 401.4936 238.608 
 L 238.7808 238.608 
 z
-" clip-path="url(#pef9957b0ab)" style="fill: #eff7f2; stroke: #4e8a6e; stroke-width: 0.9; stroke-linejoin: miter"/>
+" clip-path="url(#p49ccade014)" style="fill: #eff7f2; stroke: #4e8a6e; stroke-width: 0.9; stroke-linejoin: miter"/>
    </g>
    <g id="text_1">
     <text style="font-weight: 700; font-size: 6.3px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: middle; fill: #ffffff" x="21.05661" y="42.23952" transform="rotate(-90 21.05661 42.23952)">Identification</text>
@@ -138,19 +138,19 @@ z
     <text style="font-weight: 700; font-size: 6.3px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: middle; fill: #ffffff" x="21.05661" y="272.75904" transform="rotate(-90 21.05661 272.75904)">Included</text>
    </g>
    <g id="text_5">
-    <text style="font-weight: 700; font-size: 6.5px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: middle; fill: #1f4e78" x="129.3012" y="24.669864" transform="rotate(-0 129.3012 24.669864)">Web of Science Core Collection (SCIE)</text>
+    <text style="font-weight: 700; font-size: 6.5px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: middle; fill: #1f4e78" x="129.3012" y="24.669864" transform="rotate(-0 129.3012 24.669864)">Web of Science Core Collection</text>
    </g>
    <g id="text_6">
     <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="34.072822" transform="rotate(-0 43.12368 34.072822)">Search span: Jan 1, 2000 to Oct 31, 2026</text>
    </g>
    <g id="text_7">
-    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="43.076278" transform="rotate(-0 43.12368 43.076278)">Query: (alveolar echinococcosis OR E. multilocularis)</text>
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="43.076278" transform="rotate(-0 43.12368 43.076278)">Topic search (TS): AE / E. multilocularis terms</text>
    </g>
    <g id="text_8">
-    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="52.079734" transform="rotate(-0 43.12368 52.079734)">  AND (liver OR hepatic) AND (surgery OR ELRA)</text>
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="52.079734" transform="rotate(-0 43.12368 52.079734)">  AND hepatic surgical terms (full string in Methods)</text>
    </g>
    <g id="text_9">
-    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="61.08319" transform="rotate(-0 43.12368 61.08319)">Initial records retrieved: n = 456 (Article / Review)</text>
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="61.08319" transform="rotate(-0 43.12368 61.08319)">Records exported (full record + CR): n = 456</text>
    </g>
    <g id="text_10">
     <text style="font-weight: 700; font-size: 6.5px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: middle; fill: #595959" x="320.1372" y="24.669864" transform="rotate(-0 320.1372 24.669864)">Metadata Quality Inspection</text>
@@ -240,16 +240,16 @@ z
     <text style="font-weight: 700; font-size: 6.5px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: middle; fill: #4e8a6e" x="129.3012" y="249.756264" transform="rotate(-0 129.3012 249.756264)">Final Core HAE Surgical Dataset (n = 362)</text>
    </g>
    <g id="text_39">
-    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="259.159222" transform="rotate(-0 43.12368 259.159222)">• Original research articles: n = 304 (84.0%)</text>
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="259.159222" transform="rotate(-0 43.12368 259.159222)">• Articles: n = 302 (83.4%)</text>
    </g>
    <g id="text_40">
-    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="268.162678" transform="rotate(-0 43.12368 268.162678)">• Clinical reviews &amp; guidelines: n = 58 (16.0%)</text>
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="268.162678" transform="rotate(-0 43.12368 268.162678)">• Reviews: n = 60 (16.6%)</text>
    </g>
    <g id="text_41">
-    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="277.166134" transform="rotate(-0 43.12368 277.166134)">• Total citations: 10,361 (Mean CPP = 28.62)</text>
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="277.166134" transform="rotate(-0 43.12368 277.166134)">• Total citations: 10,361 (CPP = 28.62)</text>
    </g>
    <g id="text_42">
-    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="286.194965" transform="rotate(-0 43.12368 286.194965)">• Dataset H-index: 43 | Co-cited refs: 6,842</text>
+    <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="286.194965" transform="rotate(-0 43.12368 286.194965)">• H-index: 43 | Unique cited refs: 6,238</text>
    </g>
    <g id="text_43">
     <text style="font-size: 5.8px; font-family: 'DejaVu Sans', 'Arial', 'Helvetica', sans-serif; text-anchor: start; fill: #222222" x="43.12368" y="295.173046" transform="rotate(-0 43.12368 295.173046)">• Time span: Jan 1, 2000 – Oct 31, 2026</text>
@@ -348,7 +348,7 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="pef9957b0ab">
+  <clipPath id="p49ccade014">
    <rect x="5.76" y="5.76" width="401.76" height="310.464"/>
   </clipPath>
  </defs>
